@@ -2,3 +2,4 @@ Pillow
 opencv-python
 opencv-python
 tkinterweb
+requests
