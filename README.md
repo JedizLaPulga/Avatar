@@ -17,6 +17,7 @@ The applications are organized by folder in the `apps/` directory. Each folder c
 - **Unit Converter** (`apps/unit_converter`): Convert length, weight, and temperature.
 - **Media Viewer** (`apps/media_viewer`): View images and play videos.
 - **Browser** (`apps/browser`): A Chromium-based web browser with JS support.
+- **Snake Game** (`apps/snake_game`): Classic Snake game with scoring.
 
 ## Prerequisites
 - Python 3.x
