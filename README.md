@@ -16,6 +16,7 @@ The applications are organized by folder in the `apps/` directory. Each folder c
 - **Text Editor** (`apps/text_editor`): A tabbed text editor with modern features.
 - **Unit Converter** (`apps/unit_converter`): Convert length, weight, and temperature.
 - **Media Viewer** (`apps/media_viewer`): View images and play videos.
+- **Browser** (`apps/browser`): A Chromium-based web browser with JS support.
 
 ## Prerequisites
 - Python 3.x
