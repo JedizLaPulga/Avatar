@@ -23,10 +23,42 @@ class SnakeGameApp(tk.Tk):
         self.snake = []
         self.food = None
         
+        self.create_menu()
         self.create_widgets()
         self.center_window()
         self.bind_keys()
         self.start_game()
+
+    def create_menu(self):
+        menubar = tk.Menu(self)
+        self.config(menu=menubar)
+
+        # Settings Menu
+        settings_menu = tk.Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="Settings", menu=settings_menu)
+        
+        # Speed Submenu
+        speed_menu = tk.Menu(settings_menu, tearoff=0)
+        settings_menu.add_cascade(label="Speed", menu=speed_menu)
+        speed_menu.add_command(label="Slow", command=lambda: self.set_speed(150))
+        speed_menu.add_command(label="Normal", command=lambda: self.set_speed(100))
+        speed_menu.add_command(label="Fast", command=lambda: self.set_speed(60))
+
+        # Color Submenu
+        color_menu = tk.Menu(settings_menu, tearoff=0)
+        settings_menu.add_cascade(label="Snake Color", menu=color_menu)
+        
+        colors = [("Green", "#00FF00"), ("Blue", "#0088FF"), ("Orange", "#FFAA00"), ("Purple", "#AA00FF")]
+        for name, code in colors:
+             color_menu.add_command(label=name, command=lambda c=code: self.set_color(c))
+             
+    def set_speed(self, speed):
+        self.SPEED = speed
+
+    def set_color(self, color):
+        self.SNAKE_COLOR = color
+        # Redraw immediately if playing or game over
+        self.draw_snake()
 
     def center_window(self):
         self.update_idletasks()
@@ -119,8 +151,10 @@ class SnakeGameApp(tk.Tk):
         self.canvas.delete("snake")
         for i, (x, y) in enumerate(self.snake):
             color = self.SNAKE_COLOR
-            # Simple head distinction (optional)
-            if i == 0: color = "#55FF55" # Lighter green for head
+            # Simple head distinction (different shade)
+            if i == 0: 
+                 # Just make head white for high contrast or same color
+                 color = "white"
             
             self.canvas.create_rectangle(x, y, x + self.SPACE_SIZE, y + self.SPACE_SIZE, 
                                          fill=color, tag="snake")
