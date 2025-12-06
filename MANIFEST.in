@@ -1,0 +1,4 @@
+include apps/weather/*.png
+include apps/dashboard/*.png
+include apps/music_player/*.png
+recursive-include apps *.py
