@@ -90,7 +90,16 @@ class TextEditorApp(tk.Tk):
         self.add_new_tab()
 
     def create_widgets(self):
-        # Notebook (Tabs)
+        # Toolbar Frame
+        self.toolbar_frame = tk.Frame(self, bg=self.current_theme["frame_bg"], height=30)
+        self.toolbar_frame.pack(fill="x", side="top")
+        
+        # Theme Toggle Button
+        self.theme_btn = tk.Button(self.toolbar_frame, text="🌙 Theme", command=self.toggle_theme, 
+                                   bd=0, relief="flat", font=("Segoe UI", 9))
+        self.theme_btn.pack(side="right", padx=10, pady=2)
+
+        # Notebook (Tabs) Frame
         self.notebook_frame = tk.Frame(self, bg=self.current_theme["frame_bg"])
         self.notebook_frame.pack(fill="both", expand=True)
         
@@ -234,8 +243,15 @@ class TextEditorApp(tk.Tk):
         theme = self.current_theme
         
         # Configure Main Window
+        self.configure(bg=theme["frame_bg"]) # Window bg
         self.notebook_frame.configure(bg=theme["frame_bg"])
+        self.toolbar_frame.configure(bg=theme["frame_bg"])
         self.status_bar.configure(bg=theme["frame_bg"], fg=theme["fg"])
+        
+        # Configure Toolbar Button
+        self.theme_btn.configure(bg=theme["select_bg"], fg=theme["select_fg"], 
+                                 activebackground=theme["fg"], activeforeground=theme["bg"])
+        self.theme_btn.configure(text="☀️ Light Mode" if self.dark_mode else "🌙 Dark Mode")
         
         # Configure Notebook tabs style
         self.style.configure("TNotebook", background=theme["frame_bg"], borderwidth=0)
