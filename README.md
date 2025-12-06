@@ -15,6 +15,7 @@ The applications are organized by folder in the `apps/` directory. Each folder c
 - **Digital Clock** (`apps/digital_clock`): A clock displaying current time and date.
 - **Text Editor** (`apps/text_editor`): A tabbed text editor with modern features.
 - **Unit Converter** (`apps/unit_converter`): Convert length, weight, and temperature.
+- **Media Viewer** (`apps/media_viewer`): View images and play videos.
 
 ## Prerequisites
 - Python 3.x
