@@ -26,6 +26,7 @@ The suite is accessed via the central **Dashboard**, but apps can also be run in
 ### 🎬 Media & Fun
 -   **Music Player**: Neon-styled MP3/WAV player with playlist support.
 -   **Media Viewer**: Universal image viewer (with zoom/rotate) and video player.
+-   **Canvas Pro**: A drawing board to sketch, clear, and save artwork.
 -   **Snake Game**: The classic game with adjustable speed and custom themes.
 -   **Browser**: A functional web browser powered by `tkinterweb`.
 -   **Weather**: Real-time global weather dashboard with 3D visuals.

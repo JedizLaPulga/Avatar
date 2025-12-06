@@ -27,6 +27,7 @@ class DashboardApp(tk.Tk):
             {"name": "Snake", "icon": "🐍", "path": "snake_game/main.py", "color": "#2ECC71"},
             {"name": "Weather", "icon": "🌤️", "path": "weather/main.py", "color": "#F1C40F"},
             {"name": "Music", "icon": "🎵", "path": "music_player/main.py", "color": "#E91E63"},
+            {"name": "Canvas", "icon": "🎨", "path": "drawing_board/main.py", "color": "#FF9F43"},
         ]
         
         self.load_assets()
