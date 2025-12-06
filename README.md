@@ -19,6 +19,7 @@ The applications are organized by folder in the `apps/` directory. Each folder c
 - **Browser** (`apps/browser`): A Chromium-based web browser with JS support.
 - **Snake Game** (`apps/snake_game`): Classic Snake game with scoring.
 - **Weather App** (`apps/weather`): Real-time weather checker with beautiful UI.
+- **Dashboard** (`apps/dashboard`): A central hub to launch all applications.
 
 ## Prerequisites
 - Python 3.x
