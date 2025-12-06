@@ -20,6 +20,7 @@ The applications are organized by folder in the `apps/` directory. Each folder c
 - **Snake Game** (`apps/snake_game`): Classic Snake game with scoring.
 - **Weather App** (`apps/weather`): Real-time weather checker with beautiful UI.
 - **Dashboard** (`apps/dashboard`): A central hub to launch all applications.
+- **Music Player** (`apps/music_player`): MP3/WAV player with playlists.
 
 ## Prerequisites
 - Python 3.x
