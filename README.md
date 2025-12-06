@@ -13,6 +13,7 @@ The applications are organized by folder in the `apps/` directory. Each folder c
 - **Calculator** (`apps/calculator`): A functional calculator with basic operations.
 - **To-Do List** (`apps/todo_list`): A simple task manager to add and remove tasks.
 - **Digital Clock** (`apps/digital_clock`): A clock displaying current time and date.
+- **Text Editor** (`apps/text_editor`): A tabbed text editor with modern features.
 
 ## Prerequisites
 - Python 3.x
